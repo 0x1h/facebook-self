@@ -1,0 +1,16 @@
+[project]
+name = "fbself"
+version = "0.1.0"
+description = "async facebook user-account wrapper"
+requires-python = ">=3.10"
+dependencies = ["curl_cffi>=0.7.0", "cryptography>=42.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "mypy>=1.10"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["fbself*"]
